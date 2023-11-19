@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { travelSliderImages as data } from "./../data";
 
@@ -12,6 +12,15 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   /* border: 5px solid yellow; */
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 `;
 
 const Arrow = styled.div`
@@ -39,6 +48,8 @@ const Image = styled.img`
   min-height: 100%;
   /* object-fit: cover; */
   display: ${(props) => props.show === "slide-hidden" && "none"};
+  transition: opacity 0.7s ease-in-out;
+  animation: ${(props) => (props.show ? fadeIn : "none")} 0.5s ease-in-out;
 `;
 
 const DescContainer = styled.div`
