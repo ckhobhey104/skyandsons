@@ -24,11 +24,13 @@ import register_img1 from "./images/register/1.jpg";
 import login_img1 from "./images/login/1.jpg";
 
 // TRAVEL AND TOUR IMAGE IMPORTS
-import camboo_lagoon from "./images/travel/camboo_lagoon.jpg";
-import adventure from "./images/travel/adventure.jpg";
 import polynesia from "./images/travel/polynesia.jpg";
 // import panorama from "./images/travel/panorama.jpg";
 import bora_bora from "./images/travel/bora_bora.jpg";
+import lady_visa from "./images/travel/lady_visa.jpg";
+import zanzibar from "./images/travel/zanzibar.jpg";
+import kid_passport from "./images/travel/kid_passport.jpg";
+import airplane from "./images/travel/airplane.jpg";
 
 // MAIN PAGE IMAGES
 export const sliderItems = [
@@ -189,22 +191,26 @@ export const cart_img2 = product_img1;
 // TRAVEL AND TOUR SLIDERS
 export const travelSliderImages = [
   {
-    id: 1,
-    img: camboo_lagoon,
-    alt: "camboo_lagoon",
+    img: airplane,
+    alt: "airplane",
   },
   {
-    id: 2,
-    img: adventure,
-    alt: "adventure",
+    img: zanzibar,
+    alt: "zanzibar",
   },
   {
-    id: 3,
+    img: kid_passport,
+    alt: "kid_passport",
+  },
+  {
+    img: lady_visa,
+    alt: "lady_visa",
+  },
+  {
     img: polynesia,
     alt: "polynesia",
   },
   {
-    id: 4,
     img: bora_bora,
     alt: "bora_bora",
   },

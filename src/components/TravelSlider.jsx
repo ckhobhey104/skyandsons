@@ -5,11 +5,12 @@ import { travelSliderImages as data } from "./../data";
 
 const Container = styled.div`
   width: 100vw;
-  height: 500px;
+  height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   /* border: 5px solid yellow; */
 `;
 
@@ -33,15 +34,17 @@ const Arrow = styled.div`
   /* filter: drop-shadow(0px 0px 5px #555) */
 `;
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  /* object-fit: cover; */
   display: ${(props) => props.show === "slide-hidden" && "none"};
 `;
 
 const DescContainer = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #0000003b;
+  background-color: #00000028;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -109,7 +112,7 @@ const TravelSlider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       {data.map((item, idx) => (
-        <React.Fragment>
+        <React.Fragment key={idx}>
           <DescContainer>
             <TopDesc>We Help People Make Memories</TopDesc>
             <MiddleDesc>
@@ -120,7 +123,6 @@ const TravelSlider = () => {
           <Image
             src={item.img}
             alt={item.alt}
-            key={idx}
             show={slide === idx ? "slide" : "slide-hidden"}
           />
         </React.Fragment>
