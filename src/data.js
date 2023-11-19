@@ -6,6 +6,7 @@ import image5 from "./images/cashew-1.png";
 import image6 from "./images/gold_diamond_4.png";
 import image7 from "./images/white_sugar_1.png";
 import image8 from "./images/frytol_1.png";
+import image9 from "./images/coach.png";
 import category_img1 from "./images/categories/azobe_wood_1.jpg";
 import category_img2 from "./images/categories/grains_seeds_2.jpg";
 import category_img3 from "./images/categories/scrap.jpg";
@@ -22,13 +23,22 @@ import member_of from "./images/payment/memberof.png";
 import register_img1 from "./images/register/1.jpg";
 import login_img1 from "./images/login/1.jpg";
 
+// TRAVEL AND TOUR IMAGE IMPORTS
+import camboo_lagoon from "./images/travel/camboo_lagoon.jpg";
+import adventure from "./images/travel/adventure.jpg";
+import polynesia from "./images/travel/polynesia.jpg";
+// import panorama from "./images/travel/panorama.jpg";
+import bora_bora from "./images/travel/bora_bora.jpg";
+
+// MAIN PAGE IMAGES
 export const sliderItems = [
   {
     id: 1,
     img: image1,
     title: "GRAINS & SEEDS",
     desc: "WE ARE A LEADING MANUFACTURER AND EXPORTER OF SEEDS LIKE...",
-    // bg: "fbf0f4",
+    // bg: "fbf0f4"
+    show_site: false,
     bg: "f5fafd",
   },
   {
@@ -38,7 +48,7 @@ export const sliderItems = [
     desc: "WE MANUFACTURE AND EXPORT SOYABEANS",
     // bg: "fcf1ed",
     bg: "f5fafd",
-    // bg: "fff",
+    show_site: false,
   },
   {
     id: 3,
@@ -46,6 +56,7 @@ export const sliderItems = [
     title: "RICE",
     desc: "WE MANUFACTURE AND EXPORT RICE",
     bg: "f5fafd",
+    show_site: false,
   },
   {
     id: 4,
@@ -53,6 +64,7 @@ export const sliderItems = [
     title: "SESAME SEEDS",
     desc: "WE MANUFACTURE AND EXPORT SESAME SEEDS",
     bg: "f5fafd",
+    show_site: false,
   },
   {
     id: 5,
@@ -60,6 +72,7 @@ export const sliderItems = [
     title: "CASHEW NUTS",
     desc: "WE MANUFACTURE AND EXPORT CASHEW NUTS",
     bg: "f5fafd",
+    show_site: false,
   },
   {
     id: 6,
@@ -67,6 +80,7 @@ export const sliderItems = [
     title: "NATURAL MINERALS",
     desc: "WE ALSO EXPORT NATURAL MINERALS LIKE GOLD AND DIAMONDS",
     bg: "f5fafd",
+    show_site: false,
   },
   {
     id: 7,
@@ -74,6 +88,7 @@ export const sliderItems = [
     title: "SUGAR",
     desc: "WE ALSO SELL/EXPORT SUGAR",
     bg: "f5fafd",
+    show_site: false,
   },
   {
     id: 8,
@@ -81,6 +96,15 @@ export const sliderItems = [
     title: "OIL",
     desc: "WE ALSO SELL/EXPORT COOKING OIL",
     bg: "f5fafd",
+    show_site: false,
+  },
+  {
+    id: 9,
+    img: image9,
+    title: "TRAVEL AND TOURS",
+    desc: "GO TO OUR TRAVEL AND TOUR PAGE TO VIEW MORE",
+    bg: "f5fafd",
+    show_site: true,
   },
 ];
 
@@ -161,3 +185,27 @@ export const login_page_img = login_img1;
 export const cart_img1 = product_img6;
 
 export const cart_img2 = product_img1;
+
+// TRAVEL AND TOUR SLIDERS
+export const travelSliderImages = [
+  {
+    id: 1,
+    img: camboo_lagoon,
+    alt: "camboo_lagoon",
+  },
+  {
+    id: 2,
+    img: adventure,
+    alt: "adventure",
+  },
+  {
+    id: 3,
+    img: polynesia,
+    alt: "polynesia",
+  },
+  {
+    id: 4,
+    img: bora_bora,
+    alt: "bora_bora",
+  },
+];
