@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import Widget from "./Widget";
+import FlightLandOutlinedIcon from "@material-ui/icons/FlightLandOutlined";
+import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
+import ApartmentOutlinedIcon from "@material-ui/icons/ApartmentOutlined";
+import LocalAirportIcon from "@material-ui/icons/LocalAirport";
 
 const Wrapper = styled.div`
   background: #edf6fbbc;
@@ -35,10 +39,30 @@ const TravelWhyChooseUs = () => {
       <Container>
         <Title>WHY CHOOSE US</Title>
         <WidgetContainer>
-          <Widget />
-          <Widget />
-          <Widget />
-          <Widget />
+          <Widget
+            icon={<FlightLandOutlinedIcon style={{ fontSize: "48px" }} />}
+            heading="Diverse Destinations"
+            text="We have Undiscovered Places Included in Our List For You To Explore"
+            color="3B5999"
+          />
+          <Widget
+            icon={<MonetizationOnOutlinedIcon style={{ fontSize: "48px" }} />}
+            heading="Value For Money"
+            text="Our Packages Are Pocket Friendly. You can Travel Without Exceeding Your Budget"
+            color="91E3C7"
+          />
+          <Widget
+            icon={<ApartmentOutlinedIcon style={{ fontSize: "48px" }} />}
+            heading="Beautiful Places"
+            text="Explore The Most Beautiful Places With Us"
+            color="EFC04F"
+          />
+          <Widget
+            icon={<LocalAirportIcon style={{ fontSize: "48px" }} />}
+            heading="Passionate Travel"
+            text="Unleash the Wonderlust In You And Travel Care Free With Us"
+            color="E4405F"
+          />
         </WidgetContainer>
       </Container>
     </Wrapper>

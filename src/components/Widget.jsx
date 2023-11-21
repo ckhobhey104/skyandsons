@@ -14,9 +14,11 @@ const Top = styled.div`
 const TopIcon = styled.div`
   width: 111px;
   height: 111px;
+  font-size: 50px;
   border-radius: 50%;
   color: white;
-  background-color: green;
+  background-color: #${(props) => props.color};
+  opacity: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,15 +41,15 @@ const MiddleContent = styled.p`
   text-align: center;
 `;
 
-const Widget = () => {
+const Widget = ({ icon, heading, text, color }) => {
   return (
     <Wrapper>
       <Top>
-        <TopIcon></TopIcon>
+        <TopIcon color={color}>{icon}</TopIcon>
       </Top>
       <Middle>
-        <MiddleHeading>A Heading</MiddleHeading>
-        <MiddleContent>Our Packages are Pocket Friendly</MiddleContent>
+        <MiddleHeading>{heading}</MiddleHeading>
+        <MiddleContent>{text}</MiddleContent>
       </Middle>
     </Wrapper>
   );
