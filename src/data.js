@@ -24,9 +24,9 @@ import register_img1 from "./images/register/1.jpg";
 import login_img1 from "./images/login/1.jpg";
 
 // TRAVEL AND TOUR IMAGE IMPORTS
-import polynesia from "./images/travel/polynesia.jpg";
+// import polynesia from "./images/travel/polynesia.jpg";
 // import panorama from "./images/travel/panorama.jpg";
-import bora_bora from "./images/travel/bora_bora.jpg";
+// import bora_bora from "./images/travel/bora_bora.jpg";
 import lady_visa from "./images/travel/lady_visa.jpg";
 import zanzibar from "./images/travel/zanzibar.jpg";
 import kid_passport from "./images/travel/kid_passport.jpg";
@@ -193,25 +193,36 @@ export const travelSliderImages = [
   {
     img: airplane,
     alt: "airplane",
+    main_msg: "Travel At Ease With Sky And Sons Travel And Tour",
+    sub_msg:
+      "We aim  to provide a seamless and stress free travel experience for our clients",
   },
   {
     img: zanzibar,
     alt: "zanzibar",
+    main_msg: "We Help People Make Memories",
+    sub_msg:
+      "Sky and Sons Travel And Tour is one of the leading tour operators in the Ghana.",
   },
   {
     img: kid_passport,
     alt: "kid_passport",
+    main_msg: "We Assist Our Customers To Acquire Their Visas and Permits",
+    sub_msg: "Work Permit, Study Permit, Students Visas ",
   },
   {
     img: lady_visa,
     alt: "lady_visa",
+    main_msg: "We Offer Comprehensive Travel and Visa Processing Services",
+    sub_msg:
+      "With a dedicated team we are poised to revolutionize the travel and visa processing industry in Ghana. ",
   },
-  {
-    img: polynesia,
-    alt: "polynesia",
-  },
-  {
-    img: bora_bora,
-    alt: "bora_bora",
-  },
+  // {
+  //   img: polynesia,
+  //   alt: "polynesia",
+  // },
+  // {
+  //   img: bora_bora,
+  //   alt: "bora_bora",
+  // },
 ];

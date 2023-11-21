@@ -38,43 +38,6 @@ const Left = styled.div`
   margin-left: -10px;
 `;
 
-// const Language = styled.span`
-//   font-size: 14px;
-//   cursor: pointer;
-
-//   ${mobile({
-//     display: "none",
-//   })}
-// `;
-
-// const SearchContainer = styled.div`
-//   border: 0.5px solid lightgray;
-//   display: flex;
-//   align-items: center;
-//   margin-left: 25px;
-//   padding: 5px;
-// `;
-
-// const Input = styled.input`
-//   border: none;
-
-//   ${mobile({
-//     width: "50px",
-//   })}
-// `;
-
-// const Center = styled.div`
-//   flex: 1;
-// `;
-
-// const Logo = styled.h1`
-//   font-weight: bold;
-//   text-align: center;
-
-//   ${mobile({
-//     fontSize: "24px",
-//   })}
-// `;
 const LogoImg = styled.img`
   height: 40px;
   width: 200px;

@@ -5,7 +5,7 @@ import { travelSliderImages as data } from "./../data";
 
 const Container = styled.div`
   width: 100vw;
-  height: 550px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ const DescContainer = styled.div`
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
 `;
 
 const TopDesc = styled.div`
@@ -69,23 +69,25 @@ const TopDesc = styled.div`
   padding: 10px 20px;
   font-size: 75px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   line-height: 80px;
   margin-left: 25px;
+  display: ${(props) => props.show === "slide-hidden" && "none"};
+  transition: opacity 0.7s ease-in-out;
+  animation: ${(props) => (props.show ? fadeIn : "none")} 1s ease-in-out;
 `;
 const MiddleDesc = styled.div`
   width: 600px;
   line-height: 40px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   padding: 10px 20px;
   margin-left: 25px;
-  /* transform-origin: 50% 50%;
-  opacity: 1;
-  transform: translate(0px, 0px);
-  visibility: visible; */
+  display: ${(props) => props.show === "slide-hidden" && "none"};
+  transition: opacity 0.7s ease-in-out;
+  animation: ${(props) => (props.show ? fadeIn : "none")} 1.5s ease-in-out;
 `;
 
 const IndicatorContainer = styled.span`
@@ -117,6 +119,7 @@ const TravelSlider = () => {
   const prevSlide = () => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
   };
+  console.log(data);
   return (
     <Container>
       <Arrow direction="left" onClick={prevSlide}>
@@ -125,10 +128,11 @@ const TravelSlider = () => {
       {data.map((item, idx) => (
         <React.Fragment key={idx}>
           <DescContainer>
-            <TopDesc>We Help People Make Memories</TopDesc>
-            <MiddleDesc>
-              Sky and Sons Travel and Tours is one of the leading tour operators
-              in the country
+            <TopDesc show={slide === idx ? "slide" : "slide-hidden"}>
+              {item.main_msg}
+            </TopDesc>
+            <MiddleDesc show={slide === idx ? "slide" : "slide-hidden"}>
+              {item.sub_msg}
             </MiddleDesc>
           </DescContainer>
           <Image

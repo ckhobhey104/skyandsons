@@ -67,7 +67,6 @@ const Card = (props) => {
         </Top>
         <Middle>{props.text}</Middle>
       </Container>
-      ;
       <Info />
     </Wrapper>
   );
