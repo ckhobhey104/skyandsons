@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+
 import Announcement from "../components/Announcement";
 import Categories from "../components/Categories";
 import Navbar from "./../components/Navbar";
@@ -13,20 +13,18 @@ import BackToTop from "../components/BackToTop";
 
 const Home = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <Announcement />
-        <Navbar />
-        <Slider />
-        <AboutUs />
-        <Categories />
-        <Products />
-        <WhyChooseUs />
-        <ContactUs />
-        <Footer />
-        <BackToTop />
-      </div>
-    </BrowserRouter>
+    <div>
+      <Announcement />
+      <Navbar />
+      <Slider />
+      <AboutUs />
+      <Categories />
+      <Products />
+      <WhyChooseUs />
+      <ContactUs />
+      <Footer />
+      <BackToTop />
+    </div>
   );
 };
 

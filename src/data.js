@@ -34,6 +34,7 @@ import airplane from "./images/travel/airplane.jpg";
 
 // TRAVEL AND TOUR ABOUT US PAGE
 import cartoon_tree_no_bg from "./images/travel/about/cartoon_tree_no_bg.png";
+import smile_black_lady from "./images/travel/about/smile_black_lady.jpg";
 
 // MAIN PAGE IMAGES
 export const sliderItems = [
@@ -231,3 +232,4 @@ export const travelSliderImages = [
 ];
 
 export const cartoon_tree = cartoon_tree_no_bg;
+export const smiley_dark_lady = smile_black_lady;

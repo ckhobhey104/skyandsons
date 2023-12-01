@@ -1,4 +1,5 @@
 import { useCallback, useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { sliderItems } from "./../data";
@@ -136,7 +137,13 @@ const Slider = () => {
               <InfoContainer>
                 <Title>{item.title}</Title>
                 <Desc>{item.desc}</Desc>
-                {item.show_site && <Button>SHOW NOW</Button>}
+                {item.show_site && (
+                  <Button>
+                    <Link to="/travel" style={{ textDecoration: "none" }}>
+                      SHOW NOW
+                    </Link>
+                  </Button>
+                )}
               </InfoContainer>
             </Slide>
           ))}

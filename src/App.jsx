@@ -1,15 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import ProductList from "./pages/ProductList";
-import Product from "./pages/Product";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Cart from "./pages/Cart";
+// import ProductList from "./pages/ProductList";
+// import Product from "./pages/Product";
+// import Register from "./pages/Register";
+// import Login from "./pages/Login";
+// import Cart from "./pages/Cart";
 import TravelAndTour from "./pages/TravelAndTour";
 // import Gallery from "./pages/Gallery";
 
 const App = () => {
-  // return <Home />;
-  return <TravelAndTour />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/travel" element={<TravelAndTour />} />
+      </Routes>
+    </BrowserRouter>
+  );
+  // return <TravelAndTour />;
   // return <Gallery />;
   // return <Cart />;
 };

@@ -60,13 +60,13 @@ const TravelAboutUs = () => {
           <DescContainer>
             <DescTitle>Discover your all the destinations with us!</DescTitle>
             <DescContent>
-              Sky & Sons Tours is one stop travel house. Kinetic Tours is not
-              just a name, but it’s a commitment. We are a reputed and
+              Sky & Sons Tours is one stop travel house. Sky And Sons Tours is
+              not just a name, but it’s a commitment. We are a reputed and
               professionally managed company that has been in the business of
               Travel for over years now. We understand planning a trip can be
               tremendously frustrating especially when one doesn’t know where to
               start. We understand the travel needs of all and deliver the best
-              through meticulous planning. Kinetic Tours brings together a
+              through meticulous planning. Sky And Sons Tours brings together a
               highly trained team of individuals with combined management
               experience. We as a team which has the confidence and the
               expertise to handle the most complex and challenging tasks they
@@ -77,6 +77,7 @@ const TravelAboutUs = () => {
             </DescContent>
           </DescContainer>
         </InfoContainer>
+        <ImageContainer></ImageContainer>
       </Container>
       ;
     </Wrapper>
