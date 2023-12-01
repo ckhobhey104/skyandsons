@@ -5,6 +5,7 @@ import { mobile } from "../responsive";
 import logoTransparent from "../images/skyandsonslogo-bg-transparent.png";
 import logoOriginal from "../images/skyandsonslogo.jpg";
 import { HashLink as Link } from "react-router-hash-link";
+import { Link as RouterLink } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -120,6 +121,21 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledRouterLink = styled(RouterLink)`
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+
+  &.active {
+    color: white;
+    transition: all 3s ease;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 // const BtnContainer = styled.div`
 //   font-size: 15px;
 //   cursor: pointer;
@@ -185,9 +201,9 @@ const Navbar = () => {
               Contact Us
             </StyledLink>
           </MenuItem>
-          {/* <MenuItem>
-            <BtnContainer>SIGN IN</BtnContainer>
-          </MenuItem> */}
+          <MenuItem>
+            <StyledRouterLink to="/travel">Travel & Tour</StyledRouterLink>
+          </MenuItem>
         </Right>
       </Wrapper>
     </Container>

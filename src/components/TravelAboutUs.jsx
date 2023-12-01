@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { cartoon_tree } from "../data";
-import { smiley_dark_lady } from "../data";
+import { traveling_white_girl } from "../data";
 
 const Wrapper = styled.div`
   height: 500px;
@@ -39,6 +39,7 @@ const Title = styled.h1`
   font-weight: 500;
   cursor: default !important;
 `;
+import { traveling_white_girl } from "./../data";
 
 const DescContainer = styled.div`
   display: flex;
@@ -86,7 +87,7 @@ const TravelAboutUs = () => {
           </DescContainer>
         </InfoContainer>
         <ImageContainer>
-          <Smiley src={smiley_dark_lady} />
+          <Smiley src={traveling_white_girl} />
         </ImageContainer>
       </Container>
       ;
