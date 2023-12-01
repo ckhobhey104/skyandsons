@@ -3,6 +3,7 @@ import Announcement from "../components/Announcement";
 import TravelNav from "../components/TravelNav";
 import TravelSlider from "../components/TravelSlider";
 import TravelWhyChooseUs from "../components/TravelWhyChooseUs";
+import TravelAboutUs from "../components/TravelAboutUs";
 
 const Container = styled.div``;
 
@@ -13,6 +14,7 @@ const TravelAndTour = () => {
       <TravelNav />
       <TravelSlider />
       <TravelWhyChooseUs />
+      <TravelAboutUs />
     </Container>
   );
 };

@@ -32,6 +32,9 @@ import zanzibar from "./images/travel/zanzibar.jpg";
 import kid_passport from "./images/travel/kid_passport.jpg";
 import airplane from "./images/travel/airplane.jpg";
 
+// TRAVEL AND TOUR ABOUT US PAGE
+import cartoon_tree_no_bg from "./images/travel/about/cartoon_tree_no_bg.png";
+
 // MAIN PAGE IMAGES
 export const sliderItems = [
   {
@@ -226,3 +229,5 @@ export const travelSliderImages = [
   //   alt: "bora_bora",
   // },
 ];
+
+export const cartoon_tree = cartoon_tree_no_bg;
