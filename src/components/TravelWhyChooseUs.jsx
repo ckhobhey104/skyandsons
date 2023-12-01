@@ -7,7 +7,7 @@ import LocalAirportIcon from "@material-ui/icons/LocalAirport";
 
 const Wrapper = styled.div`
   background: #edf6fbbc;
-  width: 100vw;
+  /* width: 100vw; */
   /* color: #333; */
 `;
 

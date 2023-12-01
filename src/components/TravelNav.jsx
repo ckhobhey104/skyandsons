@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Facebook, Instagram, Pinterest, Twitter } from "@material-ui/icons";
-// import logoTransparent from "../images/skyandsonslogo-bg-transparent.png";
 import logoOriginal from "../images/skyandsonslogo.jpg";
 
 const Container = styled.div`
@@ -70,70 +69,7 @@ const SocialIcon = styled.div`
   margin-right: 10px;
 `;
 
-// const MenuItem = styled.div`
-//   font-size: 14px;
-//   cursor: pointer;
-//   margin-left: 25px;
-
-//   ${mobile({
-//     fontSize: "12px",
-//     marginLeft: "10px",
-//   })}
-// `;
-
-// const StyledLink = styled(Link)`
-//   text-decoration: none;
-//   color: #333;
-//   font-weight: bold;
-
-//   &.active {
-//     color: white;
-//     transition: all 3s ease;
-//   }
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-//
-// `;
-// const StyledLink = styled.span`
-//   text-decoration: none;
-//   color: #333;
-//   font-weight: bold;
-
-//   &.active {
-//     color: white;
-//     transition: all 3s ease;
-//   }
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-//
-// `;
-
-// const BtnContainer = styled.div`
-//   font-size: 15px;
-//   cursor: pointer;
-//   color: #fff;
-//   border: 1px solid #0297e7;
-//   padding: 0.5rem 18px;
-//   background: #0297e7;
-//   border-radius: 2px;
-// `;
-
 const Navbar = () => {
-  //   const [navBarFixed, setNavBarFixed] = useState(false);
-  //   const setToNavFixed = () => {
-  //     if (window.scrollY >= 65) {
-  //       setNavBarFixed(true);
-  //     } else {
-  //       setNavBarFixed(false);
-  //     }
-  //   };
-  //   useEffect(() => {
-  //     window.addEventListener("scroll", setToNavFixed);
-  //   }, []);
   return (
     <Container>
       <Wrapper>

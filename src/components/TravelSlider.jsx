@@ -4,7 +4,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { travelSliderImages as data } from "./../data";
 
 const Container = styled.div`
-  width: 100vw;
+  /* width: 100%; */
   height: 450px;
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@ const Image = styled.img`
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
   display: ${(props) => props.show === "slide-hidden" && "none"};
   transition: opacity 0.7s ease-in-out;
   animation: ${(props) => (props.show ? fadeIn : "none")} 0.5s ease-in-out;

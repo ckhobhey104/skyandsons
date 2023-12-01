@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import { cartoon_tree } from "../data";
+import { smiley_dark_lady } from "../data";
 
 const Wrapper = styled.div`
-  width: 100vw;
   height: 500px;
   background-image: url(${cartoon_tree});
   background-position: center left;
   background-repeat: no-repeat;
-  /* opacity: 0.5; */
   position: relative;
-  /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
 `;
 
 const Container = styled.div`
@@ -19,11 +17,16 @@ const Container = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
 `;
 const ImageContainer = styled.div`
   flex: 1;
+`;
+
+const Smiley = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 `;
 const InfoContainer = styled.div`
   flex: 2;
@@ -49,7 +52,12 @@ const DescTitle = styled.h1`
   color: #0a1b2fea;
 `;
 
-const DescContent = styled.p``;
+const DescContent = styled.p`
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  /* width: 80%; */
+`;
 
 const TravelAboutUs = () => {
   return (
@@ -77,7 +85,9 @@ const TravelAboutUs = () => {
             </DescContent>
           </DescContainer>
         </InfoContainer>
-        <ImageContainer></ImageContainer>
+        <ImageContainer>
+          <Smiley src={smiley_dark_lady} />
+        </ImageContainer>
       </Container>
       ;
     </Wrapper>

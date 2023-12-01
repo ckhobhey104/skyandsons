@@ -120,15 +120,15 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const BtnContainer = styled.div`
-  font-size: 15px;
-  cursor: pointer;
-  color: #fff;
-  border: 1px solid #0297e7;
-  padding: 0.5rem 18px;
-  background: #0297e7;
-  border-radius: 2px;
-`;
+// const BtnContainer = styled.div`
+//   font-size: 15px;
+//   cursor: pointer;
+//   color: #fff;
+//   border: 1px solid #0297e7;
+//   padding: 0.5rem 18px;
+//   background: #0297e7;
+//   border-radius: 2px;
+// `;
 
 const Navbar = () => {
   const [navBarFixed, setNavBarFixed] = useState(false);
