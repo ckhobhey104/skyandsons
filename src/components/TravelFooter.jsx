@@ -8,11 +8,12 @@ import {
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { member_of_img } from "../data";
+// import { member_of_img } from "../data";
 
 const Container = styled.div`
   display: flex;
   padding-top: 40px;
+  height: 300px;
 
   ${mobile({
     flexDirection: "column",
@@ -157,7 +158,7 @@ const Footer = () => {
           <MailOutline style={{ marginRight: "10px" }} />
           whitneyhillaryarthur@rufz.com
         </ContactItem>*/}
-        <MemberOf src={member_of_img} />
+        {/* <MemberOf src={member_of_img} /> */}
       </Right>
     </Container>
   );
