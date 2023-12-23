@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #cee7f3af;
+  background-color: #cee7f3ce;
   border-radius: 50%;
   display: flex;
   align-items: center;

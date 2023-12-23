@@ -1,8 +1,3 @@
-import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@material-ui/icons";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -12,7 +7,7 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.224);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -50,36 +45,32 @@ const Image = styled.img`
   z-index: 2;
 `;
 
-const Icon = styled.div`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  transition: all 0.5s ease;
+// const Icon = styled.div`
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   background-color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 10px;
+//   transition: all 0.5s ease;
 
-  &:hover {
-    background-color: #e9f5f5;
-    transform: scale(1.1);
-  }
-`;
+//   &:hover {
+//     background-color: #e9f5f5;
+//     transform: scale(1.1);
+//   }
+// `;
 const Title = styled.h1`
+  color: #071a29e5;
+  font-size: 30px;
+  font-weight: 900;
+`;
+const ProductInfo = styled.p`
   color: white;
   font-size: 20px;
-  font-weight: 500;
-`;
-const Button = styled.button`
-  border: none;
-  margin-top: 5px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-  background-color: #e9f5f5;
-  padding: 5px;
+  font-weight: 300;
+  text-align: center;
 `;
 
 const Product = ({ item }) => {
@@ -89,7 +80,7 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>View More</Button>
+        <ProductInfo>{item.desc}</ProductInfo>
         {/* <Icon>
           <ShoppingCartOutlined />
         </Icon>

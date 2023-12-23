@@ -20,8 +20,6 @@ import product_img6 from "./images/products/frytol.png";
 import product_img7 from "./images/products/azobe_wood.png";
 import product_img8 from "./images/products/teak_wood.png";
 import member_of from "./images/payment/memberof.png";
-import register_img1 from "./images/register/1.jpg";
-import login_img1 from "./images/login/1.jpg";
 
 // TRAVEL AND TOUR IMAGE IMPORTS
 // import polynesia from "./images/travel/polynesia.jpg";
@@ -143,51 +141,55 @@ export const popularProducts = [
     id: 1,
     img: product_img1,
     title: "SOYABEANS",
+    desc: "We get it from individual farmers export/sell to organizations",
   },
   {
     id: 2,
     img: product_img2,
     title: "CASHEW NUTS",
+    desc: "We are into export of cashews",
   },
   {
     id: 3,
     img: product_img3,
     title: "SESAME SEEDS",
+    desc: "We get it from individual farmers export/sell to organizations",
   },
   {
     id: 4,
     img: product_img4,
     title: "SUGAR",
+    desc: "We import sugar and sell to various organizations in the country",
   },
   {
     id: 5,
     img: product_img5,
     title: "DENYA WOODS",
+    desc: "We get it from our forest and sell it to various organizations",
   },
   {
     id: 6,
     img: product_img6,
     title: "OIL",
+    desc: "We import oil from Asia and Europe and supply to local organizations (including red/palm oil)",
   },
   {
     id: 7,
     img: product_img7,
     title: "AZOBE WOODS",
+    desc: "We get it from our forest and sell it to various organizations",
   },
   {
     id: 8,
     img: product_img8,
     title: "TEAK",
+    desc: "We get it from our forest and sell it to various organizations",
   },
 ];
 
 export const member_of_img = member_of;
 
 export const product_page_img = category_img4;
-
-export const register_page_img = register_img1;
-
-export const login_page_img = login_img1;
 
 export const cart_img1 = product_img6;
 

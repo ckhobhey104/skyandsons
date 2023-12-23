@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { cartoon_tree } from "../data";
-import { traveling_white_girl } from "../data";
+import { traveling_white_lady } from "../data";
 
 const Wrapper = styled.div`
   height: 500px;
@@ -39,7 +39,6 @@ const Title = styled.h1`
   font-weight: 500;
   cursor: default !important;
 `;
-import { traveling_white_girl } from "./../data";
 
 const DescContainer = styled.div`
   display: flex;
@@ -67,7 +66,7 @@ const TravelAboutUs = () => {
         <InfoContainer>
           <Title>About Sky and Sons Travel And Tour</Title>
           <DescContainer>
-            <DescTitle>Discover your all the destinations with us!</DescTitle>
+            <DescTitle>Discover all your the destinations with us!</DescTitle>
             <DescContent>
               Sky & Sons Tours is one stop travel house. Sky And Sons Tours is
               not just a name, but it’s a commitment. We are a reputed and
@@ -87,7 +86,7 @@ const TravelAboutUs = () => {
           </DescContainer>
         </InfoContainer>
         <ImageContainer>
-          <Smiley src={traveling_white_girl} />
+          <Smiley src={traveling_white_lady} />
         </ImageContainer>
       </Container>
       ;

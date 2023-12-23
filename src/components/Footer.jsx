@@ -108,7 +108,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>S.K.Y AND SON'S</Logo>
+        <Logo>S.K.Y. & SON'S</Logo>
         <Desc>Follow us on all social media handles.</Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -150,7 +150,7 @@ const Footer = () => {
         <Title>Contact</Title>
         <ContactItem>
           <ApartmentIcon style={{ marginRight: "10px" }} />
-          SKY and SON's Company LTD{" "}
+          SKY & SON'S Company LTD{" "}
         </ContactItem>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />

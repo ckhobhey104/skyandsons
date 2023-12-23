@@ -14,7 +14,7 @@ const Container = styled.div`
 const Announcement = () => {
   return (
     <div>
-      <Container>info@skyandsons.net</Container>
+      <Container>skyandsonslimited@outlook.com</Container>
     </div>
   );
 };

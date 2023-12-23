@@ -94,10 +94,10 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
 `;
-const MemberOf = styled.img`
-  width: 25%;
-  height: 20%;
-`;
+// const MemberOf = styled.img`
+//   width: 25%;
+//   height: 20%;
+// `;
 
 const Footer = () => {
   const scrollUp = () => {
