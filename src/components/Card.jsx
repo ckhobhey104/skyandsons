@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 // import { StarsIcon } from '@mui/icons-material/Stars';
 const Card = (props) => {
@@ -26,6 +27,10 @@ const Card = (props) => {
     &:hover ${Info} {
       opacity: 1;
     }
+
+    ${mobile({
+      marginBottom: "15px",
+    })}
   `;
   const Container = styled.div`
     /* margin: 5px; */

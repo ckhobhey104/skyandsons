@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { popularProducts } from "./../data";
 import Product from "./Product";
+import { mobile } from "../responsive";
 
 const Wrapper = styled.div`
   background: #f5fafd;
@@ -27,6 +28,9 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 200;
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const Container = styled.div`
@@ -34,6 +38,9 @@ const Container = styled.div`
   display: flex;
   /* justify-content: space-between; */
   overflow: hidden;
+  ${mobile({
+    overflow: "visible",
+  })}
 `;
 
 const SlideWrapper = styled.div`
@@ -44,6 +51,9 @@ const SlideWrapper = styled.div`
   transform: translateX(
     ${(props) => props.slideIndex * -(props.length * 15)}vw
   );
+  ${mobile({
+    display: "block",
+  })}
 `;
 const Title = styled.h1`
   font-size: 25px;

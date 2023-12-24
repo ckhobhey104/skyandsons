@@ -8,7 +8,6 @@ import {
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-// import { member_of_img } from "../data";
 
 const Container = styled.div`
   display: flex;

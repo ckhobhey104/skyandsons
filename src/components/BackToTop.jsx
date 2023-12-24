@@ -50,7 +50,6 @@ const BackToTop = () => {
       behavior: "smooth",
     });
   };
-  console.log(backToTopFixed);
   return (
     <BacktoTopButton
       title="Back To Top"

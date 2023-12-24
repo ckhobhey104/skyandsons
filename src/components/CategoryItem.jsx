@@ -53,14 +53,14 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const Button = styled.button`
-  border: none;
-  padding: 10px;
-  background-color: white;
-  color: grey;
-  cursor: pointer;
-  font-weight: 600;
-`;
+// const Button = styled.button`
+//   border: none;
+//   padding: 10px;
+//   background-color: white;
+//   color: grey;
+//   cursor: pointer;
+//   font-weight: 600;
+// `;
 
 const CategoryItem = ({ item }) => {
   return (

@@ -119,6 +119,9 @@ const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const StyledRouterLink = styled(RouterLink)`
@@ -169,7 +172,7 @@ const Navbar = () => {
             <StyledLink
               to="#aboutus"
               smooth
-              className={navBarFixed ? "active" : ""}
+              className={"about " + (navBarFixed ? "active" : "")}
             >
               About Us
             </StyledLink>
@@ -178,7 +181,7 @@ const Navbar = () => {
             <StyledLink
               to="#explore_products"
               smooth
-              className={navBarFixed ? "active" : ""}
+              className={"explore " + (navBarFixed ? "active" : "")}
             >
               Explore Our Products
             </StyledLink>
@@ -187,7 +190,7 @@ const Navbar = () => {
             <StyledLink
               to="#whychooseus"
               smooth
-              className={navBarFixed ? "active" : ""}
+              className={"whychoose " + (navBarFixed ? "active" : "")}
             >
               Why Choose Us
             </StyledLink>
@@ -196,13 +199,15 @@ const Navbar = () => {
             <StyledLink
               to="#contactus"
               smooth
-              className={navBarFixed ? "active" : ""}
+              className={"contact " + (navBarFixed ? "active" : "")}
             >
               Contact Us
             </StyledLink>
           </MenuItem>
           <MenuItem>
-            <StyledRouterLink to="/travel">Travel & Tour</StyledRouterLink>
+            <StyledRouterLink to="/travel">
+              Our Travel & Tour Page
+            </StyledRouterLink>
           </MenuItem>
         </Right>
       </Wrapper>

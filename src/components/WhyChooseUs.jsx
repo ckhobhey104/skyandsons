@@ -3,10 +3,15 @@ import Card from "./Card";
 import { StarsOutlined } from "@material-ui/icons";
 import SettingsIcon from "@material-ui/icons/Settings";
 import GroupIcon from "@material-ui/icons/Group";
+import { mobile } from "./../responsive";
 
 const Wrapper = styled.div`
   background: #edf6fbbc;
   /* color: #333; */
+  ${mobile({
+    // width: "100%",
+    // border: "1px solid red",
+  })}
 `;
 const Title = styled.h1`
   font-size: 25px;
@@ -20,6 +25,9 @@ const Container = styled.div`
   padding: 30px;
   display: flex;
   gap: 20px;
+  ${mobile({
+    display: "block",
+  })}
 `;
 
 const WhyChooseUs = () => {

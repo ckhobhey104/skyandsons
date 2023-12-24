@@ -12,11 +12,6 @@ const Container = styled.div`
   padding: 50px;
   align-items: center;
   justify-content: center;
-
-  /* ${mobile({
-    padding: "0px",
-    flexDirection: "column",
-  })} */
 `;
 const Title = styled.h1`
   font-size: 30px;
@@ -35,6 +30,10 @@ const Desc = styled.p`
   &.paragraph {
     margin-top: 20px;
   }
+
+  ${mobile({
+    fontSize: "15px",
+  })}
 `;
 
 const Categories = () => {
@@ -58,10 +57,9 @@ const Categories = () => {
         </Desc>
         <Desc className="paragraph">
           We are a sole proprietorship, and we obtain our products from
-          well-known market sellers at cheap pricing. We are able to
-          satisfactorily satisfy our clients thanks to the direction of "Mr.
-          Osafo Justus," who has extensive knowledge and experience in this
-          sector.
+          well-known market sellers at cheap pricing. We are able to efficiently
+          satisfy our clients due to our extensive knowledge and experience in
+          this sector.
         </Desc>
       </Container>
     </Wrapper>

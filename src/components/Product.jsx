@@ -62,7 +62,7 @@ const Image = styled.img`
 //   }
 // `;
 const Title = styled.h1`
-  color: #071a29e5;
+  color: #e8edf0e4;
   font-size: 30px;
   font-weight: 900;
 `;
