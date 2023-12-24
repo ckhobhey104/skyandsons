@@ -108,7 +108,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>S.K.Y AND SON'S</Logo>
+        <Logo>S.K.Y & SON'S</Logo>
         <Desc>Follow us on all social media handles.</Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">

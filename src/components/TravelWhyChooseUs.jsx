@@ -4,6 +4,7 @@ import FlightLandOutlinedIcon from "@material-ui/icons/FlightLandOutlined";
 import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 import ApartmentOutlinedIcon from "@material-ui/icons/ApartmentOutlined";
 import LocalAirportIcon from "@material-ui/icons/LocalAirport";
+import { mobile } from "./../responsive";
 
 const Wrapper = styled.div`
   background: #edf6fbbc;
@@ -31,6 +32,9 @@ const WidgetContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({
+    display: "block",
+  })}
 `;
 
 const TravelWhyChooseUs = () => {

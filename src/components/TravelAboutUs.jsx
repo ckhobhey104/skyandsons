@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { cartoon_tree } from "../data";
 import { traveling_white_lady } from "../data";
+import { mobile } from "./../responsive";
 
 const Wrapper = styled.div`
   height: 500px;
@@ -17,14 +18,23 @@ const Container = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  ${mobile({
+    display: "block",
+  })}
 `;
 const ImageContainer = styled.div`
   flex: 1;
+  height: 480px;
+  padding: 10px;
+  ${mobile({
+    display: "none",
+    // width: "100%",
+    // border: "1px solid red",
+  })};
 `;
 
 const Smiley = styled.img`
-  width: 100%;
+  width: 620px;
   height: 100%;
   border-radius: 15px;
 `;
@@ -50,6 +60,10 @@ const DescTitle = styled.h1`
   font-weight: 700;
   margin-top: 20px;
   color: #0a1b2fea;
+  ${mobile({
+    fontSize: "25px",
+    paddingBottom: "15px",
+  })};
 `;
 
 const DescContent = styled.p`
@@ -57,6 +71,12 @@ const DescContent = styled.p`
   font-weight: 300;
   line-height: 1.5;
   /* width: 80%; */
+  ${mobile({
+    fontSize: "15px",
+    lineHeight: "1.3",
+    // width: "100%",
+    // border: "1px solid red",
+  })}
 `;
 
 const TravelAboutUs = () => {

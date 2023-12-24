@@ -28,6 +28,7 @@ const Wrapper = styled.div`
 
   ${mobile({
     height: "10px 0px",
+    padding: "5px 5px",
   })}
 `;
 const Left = styled.div`
@@ -49,8 +50,10 @@ const Right = styled.div`
   justify-content: flex-end;
 
   ${mobile({
-    flex: 2,
-    justifyContent: "center",
+    // flex: 2,
+    // justifyContent: "center",
+    // marginRight: "0px",
+    display: "none",
   })}
 `;
 
@@ -69,7 +72,7 @@ const SocialIcon = styled.div`
   margin-right: 10px;
 `;
 
-const Navbar = () => {
+const TravelNavbar = () => {
   return (
     <Container>
       <Wrapper>
@@ -97,4 +100,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default TravelNavbar;

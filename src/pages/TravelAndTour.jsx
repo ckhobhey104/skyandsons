@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
-import TravelNav from "../components/TravelNav";
+import TravelNavbar from "../components/TravelNav";
 import TravelSlider from "../components/TravelSlider";
 import TravelWhyChooseUs from "../components/TravelWhyChooseUs";
 import TravelAboutUs from "../components/TravelAboutUs";
@@ -12,7 +12,7 @@ const TravelAndTour = () => {
   return (
     <Container>
       <Announcement />
-      <TravelNav />
+      <TravelNavbar />
       <TravelSlider />
       <TravelWhyChooseUs />
       <TravelAboutUs />

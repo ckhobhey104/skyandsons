@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { travelSliderImages as data } from "./../data";
+import { mobile } from "./../responsive";
 
 const Container = styled.div`
   /* width: 100%; */
@@ -76,6 +77,10 @@ const TopDesc = styled.div`
   display: ${(props) => props.show === "slide-hidden" && "none"};
   transition: opacity 0.7s ease-in-out;
   animation: ${(props) => (props.show ? fadeIn : "none")} 1s ease-in-out;
+  ${mobile({
+    fontSize: "40px",
+    lineHeight: "45px",
+  })}
 `;
 const MiddleDesc = styled.div`
   width: 600px;
@@ -88,6 +93,11 @@ const MiddleDesc = styled.div`
   display: ${(props) => props.show === "slide-hidden" && "none"};
   transition: opacity 0.7s ease-in-out;
   animation: ${(props) => (props.show ? fadeIn : "none")} 1.5s ease-in-out;
+  ${mobile({
+    fontSize: "15px",
+    lineHeight: "20px",
+    width: "250px",
+  })}
 `;
 
 const IndicatorContainer = styled.span`
@@ -119,7 +129,7 @@ const TravelSlider = () => {
   const prevSlide = () => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
   };
-  console.log(data);
+
   return (
     <Container>
       <Arrow direction="left" onClick={prevSlide}>
