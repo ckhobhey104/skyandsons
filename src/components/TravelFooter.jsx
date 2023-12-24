@@ -144,7 +144,7 @@ const Footer = () => {
         <Title>Contact</Title>
         <ContactItem>
           <ApartmentIcon style={{ marginRight: "10px" }} />
-          SKY and SON's Company LTD{" "}
+          SKY & SON'S Company LTD{" "}
         </ContactItem>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
