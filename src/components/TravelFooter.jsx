@@ -3,6 +3,8 @@ import {
   Instagram,
   Pinterest,
   Room,
+  Phone,
+  MailOutline,
   Twitter,
 } from "@material-ui/icons";
 import ApartmentIcon from "@material-ui/icons/Apartment";
@@ -13,8 +15,10 @@ const Container = styled.div`
   display: flex;
   padding-top: 40px;
   height: 300px;
+  margin-top: 120px;
 
   ${mobile({
+    marginTop: "0",
     flexDirection: "column",
   })}
 `;
@@ -148,15 +152,16 @@ const Footer = () => {
         </ContactItem>
         <ContactItem>
           <Room style={{ marginRight: "10px" }} />
-          52 Cheese, Ave Street, West Legon, Accra - 23321, Ghana, West Africa
+          West Legon, Police Container
         </ContactItem>
-        {/* <ContactItem>
-          <Phone style={{ marginRight: "10px" }} /> +233- 584- 0753
+        <ContactItem>
+          <Phone style={{ marginRight: "10px" }} /> 0302 43 6242/ +233 24 348
+          3409 / +233 27 663 1998
         </ContactItem>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          whitneyhillaryarthur@rufz.com
-        </ContactItem>*/}
+          skyandsonslimited@outlook.com
+        </ContactItem>
         {/* <MemberOf src={member_of_img} /> */}
       </Right>
     </Container>

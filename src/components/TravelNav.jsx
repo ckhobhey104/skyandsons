@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
 import { Facebook, Instagram, Pinterest, Twitter } from "@material-ui/icons";
 import logoOriginal from "../images/skyandsonslogo.jpg";
@@ -77,7 +78,10 @@ const TravelNavbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <LogoImg src={logoOriginal} />
+          <Link to="/">
+            {" "}
+            <LogoImg src={logoOriginal} />
+          </Link>
         </Left>
         <Right>
           <SocialContainer>
