@@ -9,7 +9,6 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   display: flex;
-  flex-direction:
   padding: 20px;
   align-items: center;
   justify-content: center;

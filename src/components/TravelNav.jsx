@@ -42,6 +42,7 @@ const Left = styled.div`
 const LogoImg = styled.img`
   height: 40px;
   width: 200px;
+  border-radius: 20px;
 `;
 
 const Right = styled.div`

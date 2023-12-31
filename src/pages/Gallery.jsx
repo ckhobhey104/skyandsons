@@ -1,268 +1,153 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
+import { media } from "./../data";
+import { mobile } from "./../responsive";
 
-// const Parallax = ({ background, children }) => {
-//   const [translateY, setTranslateY] = useState(0);
+const Container = styled.div`
+  background: #edf6fbbc;
+  /* width: 95%; */
+  padding: 10px;
+  min-height: 100vh;
+  position: relative;
+  margin: 0 auto;
+`;
 
-//   const calculateTranslation = () => {
-//     setTranslateY(window.scrollY / 5);
-//   };
+const Title = styled.div`
+  display: flex;
+`;
 
-//   useEffect(() => {
-//     document.addEventListener("scroll", calculateTranslation);
+const Left = styled.div`
+  flex: 1;
+`;
+const Right = styled.div`
+  flex: 1;
+`;
 
-//     return () => {
-//       document.removeEventListener("scroll", calculateTranslation);
-//     };
-//   }, []);
+const H1 = styled.h1`
+  text-align: center;
+  padding: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  ${mobile({
+    fontSize: "20px",
+  })}
+`;
+const MediaContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin: 20px auto;
+`;
 
-//   const transform = `translate3d(-50%, -${translateY}px, 0)`;
+const Media = styled.div`
+  height: 220px;
+  width: 100%;
+  border: 5px solid #eee;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  cursor: pointer;
+`;
+const Image = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+const Video = styled.video`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 
-//   return (
-//     <div className="parallax">
-//       <img src={background} style={{ transform }} alt="Parallax Background" />
-//       {children}
-//     </div>
-//   );
-// };
-
-// const Gallery = () => {
-//   return (
-//     <div className="container">
-//       <div style={{ minHeight: 500 }} />
-//       <Parallax background="https://placekitten.com/1200/1000">
-//         <h1>Simple as F**k</h1>
-//       </Parallax>
-//     </div>
-//   );
-// };
-
-// export default Gallery;
-
-// PARALLAX HOVER
-
-// import React, { useState, useRef } from "react";
-// import { login_page_img } from "../data";
-
-// const config = {
-//   scale: 1.03,
-//   rotation: 0.3,
-//   alpha: 0.4,
-//   shadow: 8,
-// };
-
-// const ParallaxHover = ({ children, width, height }) => {
-//   const wrapperRef = useRef(null);
-//   const [state, setState] = useState({
-//     rotateX: 0,
-//     rotateY: 0,
-//     shadowMovement: 20,
-//     shadowSize: 50,
-//     scale: 1,
-//     angle: 0,
-//     alpha: 0,
-//   });
-
-//   const buildState = (
-//     rotateX,
-//     rotateY,
-//     shadowMovement,
-//     shadowSize,
-//     scale,
-//     angle,
-//     alpha
-//   ) => {
-//     setState({
-//       rotateX,
-//       rotateY,
-//       shadowMovement,
-//       shadowSize,
-//       scale,
-//       angle,
-//       alpha,
-//     });
-//   };
-
-//   const buildTransformStrings = (rotateX, rotateY, scale) => ({
-//     WebkitTransform: `perspective(1000px) scale(${scale}) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-//     MozTransform: `perspective(1000px) scale(${scale}) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-//     transform: `perspective(1000px) scale(${scale}) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-//   });
-
-//   const calculateDistance = (bounds, offsetX, offsetY) => {
-//     const distanceX = Math.pow(offsetX - bounds.width / 2, 2);
-//     const distanceY = Math.pow(offsetY - bounds.height / 2, 2);
-//     return Math.floor(Math.sqrt(distanceX + distanceY));
-//   };
-
-//   const calculateAlphaFromCenter = (current) => {
-//     const max = Math.max(width, height);
-//     return (current / max) * config.alpha;
-//   };
-
-//   const handleMouseMove = ({ pageX, pageY, nativeEvent }) => {
-//     const bounds = wrapperRef.current.getBoundingClientRect();
-//     const centerX = width / 2;
-//     const centerY = height / 2;
-//     const widthMultiplier = 320 / width;
-
-//     const offsetX = 0.52 - (pageX - bounds.left - window.scrollX) / width;
-//     const offsetY = 0.52 - (pageY - bounds.top - window.scrollY) / height;
-
-//     const deltaX = pageX - bounds.left - window.scrollX - centerX;
-//     const deltaY = pageY - bounds.top - window.scrollY - centerY;
-
-//     const rotateX = (deltaY - offsetY) * (0.08 * widthMultiplier);
-//     const rotateY = (offsetX - deltaX) * (0.04 * widthMultiplier);
-
-//     const angleRad = Math.atan2(deltaY, deltaX);
-//     const angleRaw = (angleRad * 180) / Math.PI - 90;
-//     const angleDeg = angleRaw < 0 ? angleRaw + 360 : angleRaw;
-
-//     const distanceFromCenter = calculateDistance(
-//       bounds,
-//       nativeEvent.offsetX,
-//       nativeEvent.offsetY
-//     );
-//     const shadowMovement = centerY * 0.25;
-//     const shadowSize = 120;
-//     const alpha = calculateAlphaFromCenter(distanceFromCenter);
-
-//     buildState(
-//       rotateX,
-//       rotateY,
-//       shadowMovement,
-//       shadowSize,
-//       config.scale,
-//       angleDeg,
-//       alpha
-//     );
-//   };
-
-//   const handleMouseLeave = () => {
-//     buildState(0, 0, 20, 50, 1, 0, 0);
-//   };
-
-//   const renderChildren = (children) => {
-//     const { rotateX, rotateY, scale } = state;
-//     const styles = buildTransformStrings(rotateX, rotateY, scale);
-
-//     if (!Array.isArray(children)) {
-//       return (
-//         <div style={styles} className="ph-layer">
-//           {children}
-//         </div>
-//       );
-//     }
-
-//     return children.map((layer, key) => {
-//       const num = key + 1;
-//       const rotateX = Math.floor(state.rotateX / num);
-//       const rotateY = Math.floor(state.rotateY / num);
-//       let layerStyles = buildTransformStrings(rotateX, rotateY, state.scale);
-//       let textClass;
-
-//       if (layer.ref === "text") {
-//         textClass = "ph-text";
-//         const shadow = {
-//           textShadow: `${rotateY * 0.5}px ${
-//             rotateX * 0.5
-//           }px 10px rgba(0, 0, 0, 0.5)`,
-//         };
-
-//         layerStyles = { ...shadow, ...layerStyles };
-//       }
-
-//       return (
-//         <div key={key} style={layerStyles} className={`ph-layer ${textClass}`}>
-//           {layer}
-//         </div>
-//       );
-//     });
-//   };
-
-//   const { rotateX, rotateY, scale, shadowMovement, shadowSize, angle, alpha } =
-//     state;
-
-//   const baseTransforms = buildTransformStrings(rotateX, rotateY, scale);
-//   const stylesWrapper = {
-//     ...baseTransforms,
-//     width,
-//     height,
-//   };
-//   const stylesShadow = {
-//     ...baseTransforms,
-//     boxShadow: `0px ${shadowMovement}px ${shadowSize}px rgba(0, 0, 0, 0.6)`,
-//   };
-//   const stylesLighting = {
-//     ...baseTransforms,
-//     backgroundImage: `linear-gradient(${angle}deg, rgba(255,255,255, ${alpha}) 0%, rgba(255,255,255,0) 40%)`,
-//   };
-
-//   return (
-//     <div style={{ transformStyle: "preserve-3d" }}>
-//       <figure
-//         ref={wrapperRef}
-//         className="ph-wrapper"
-//         style={stylesWrapper}
-//         onMouseMove={handleMouseMove}
-//         onMouseLeave={handleMouseLeave}
-//       >
-//         <div className="ph-shadow" style={stylesShadow} />
-//         <div className="ph-layers">{renderChildren(children)}</div>
-//         <div className="ph-lighting" style={stylesLighting} />
-//       </figure>
-//     </div>
-//   );
-// };
-
-// const Gallery = () => {
-//   return (
-//     <div>
-//       <ParallaxHover width="500" height="300">
-//         <img width={500} height={300} src={login_page_img} alt="parallax" />
-//         <h1>Parallax Hover</h1>
-//       </ParallaxHover>
-//     </div>
-//   );
-// };
-
-// export default Gallery;
-
-import React from "react";
-import "./try.css";
-
-const SectionComponent = ({ image }) => {
-  console.log(image);
-  return (
-    <div className="parallax-section-container">
-      <div className="parallax-foreground">
-        <span>No background:fixed support in 2023?</span>
-        <span className="cheeky">Sent from my iPhone</span>
-      </div>
-      <div
-        className="parallax-background"
-        style={{ backgroundImage: `url(${image})`, height: 500 }}
-      ></div>
-    </div>
-  );
-};
+const Popup = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: ${(props) => (props.file ? "block" : "none")};
+`;
+const Close = styled.span`
+position: absolute;
+top: 5px;
+right: 20px;
+font-size: 50px;
+font-weight: bolder;
+z-index; 100;
+cursor: pointer;
+color: #fff;
+user-select: none;
+`;
+const PopupImage = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  border: 3px solid #fff;
+`;
+const PopupVideo = styled.video`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  border: 3px solid #fff;
+`;
 
 const Gallery = () => {
-  //   const images = [
-  //     "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  //     "https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  //     "https://images.pexels.com/photos/4091975/pexels-photo-4091975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  //   ];
-
+  const [file, setFile] = useState(null);
+  console.log(file);
   return (
-    <div className="parallax-page-container">
-      <SectionComponent image="https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-      <SectionComponent image="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-      <SectionComponent image="https://images.pexels.com/photos/4091975/pexels-photo-4091975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-      {/* {images.map((image, index) => (
-        <SectionComponent key={index} image={image} />
-      ))} */}
-    </div>
+    <Container>
+      <Title>
+        <Left>
+          <H1>Our Gallery</H1>
+        </Left>
+        <Right>
+          <RouterLink to="/" style={{ textDecoration: "none" }}>
+            <H1>Back To Home</H1>
+          </RouterLink>
+        </Right>
+      </Title>
+
+      <MediaContainer>
+        {media.map((file, index) => (
+          <Media key={index} onClick={() => setFile(file)}>
+            {file.type === "image" ? (
+              <Image src={file.src} />
+            ) : (
+              // <Video src={`${file.src}t=0.001`} muted preload="metadata" />
+              <Video src={file.src} muted />
+            )}
+          </Media>
+        ))}
+      </MediaContainer>
+      <Popup file={file}>
+        <Close onClick={() => setFile(null)}>&times;</Close>
+        {file?.type === "video" ? (
+          <PopupVideo src={file?.src} muted autoPlay controls />
+        ) : (
+          <PopupImage src={file?.src} />
+        )}
+      </Popup>
+    </Container>
   );
 };
 

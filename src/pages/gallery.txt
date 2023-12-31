@@ -1,0 +1,84 @@
+import React, { useState } from "react";
+import styled from "styled-components";
+import { photos } from "./../data";
+import "./gallery.css";
+import Modal from "./../components/Modal";
+
+const Wrapper = styled.div`
+  padding: 0px 60px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  border: 1px solid green;
+`;
+
+const Gallery = () => {
+  const [clickedImg, setClickedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  // Handle Click Fxn
+  const handleClick = (item, index) => {
+    setCurrentIndex(index);
+    setClickedImg(item.src);
+  };
+
+  const handleRotationRight = () => {
+    const totalLength = photos.length;
+    if (currentIndex + 1 >= totalLength) {
+      setCurrentIndex(0);
+      const newUrl = photos[0].src;
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex + 1;
+    const newUrl = photos.filter((item) => {
+      return photos.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0].src;
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
+
+  const handleRotationLeft = () => {
+    const totalLength = photos.length;
+    if (currentIndex === 0) {
+      setCurrentIndex(totalLength - 1);
+      const newUrl = photos[totalLength - 1].src;
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex - 1;
+    const newUrl = photos.filter((item) => {
+      return photos.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0].src;
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
+
+  return (
+    <Wrapper>
+      {photos.map((item, index) => (
+        <div key={index} className="wrapper-images">
+          <img
+            src={item.src}
+            alt={item.text}
+            onClick={() => handleClick(item, index)}
+          />
+          <h2>{item.text}</h2>
+        </div>
+      ))}
+      {clickedImg && (
+        <Modal
+          clickedImg={clickedImg}
+          handleRotationRight={handleRotationRight}
+          setClickedImg={setClickedImg}
+          handleRotationLeft={handleRotationLeft}
+        />
+      )}
+    </Wrapper>
+  );
+};
+
+export default Gallery;

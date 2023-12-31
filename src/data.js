@@ -35,6 +35,22 @@ import cartoon_tree_no_bg from "./images/travel/about/cartoon_tree_no_bg.png";
 import smile_black_lady from "./images/travel/about/smile_black_lady.jpg";
 import white_traveling_lady from "./images/travel/about/traveling_white_lady.jpg";
 
+// GALLERY PAGE IMAGES
+import gallery_video_1 from "./images/media/vid-01.mp4";
+import gallery_video_2 from "./images/media/vid-02.mp4";
+import gallery_image_1 from "./images/media/img-01.jpg";
+import gallery_image_2 from "./images/media/img-02.jpg";
+import gallery_image_3 from "./images/media/img-03.jpg";
+import gallery_image_4 from "./images/media/img-04.jpg";
+import gallery_video_3 from "./images/media/vid-03.mp4";
+import gallery_video_4 from "./images/media/vid-04.mp4";
+import gallery_video_5 from "./images/media/vid-05.mp4";
+import gallery_video_6 from "./images/media/vid-06.mp4";
+import gallery_image_5 from "./images/media/img-05.jpg";
+import gallery_video_7 from "./images/media/vid-07.mp4";
+import gallery_video_8 from "./images/media/vid-08.mp4";
+import gallery_video_9 from "./images/media/vid-09.mp4";
+
 // MAIN PAGE IMAGES
 export const sliderItems = [
   {
@@ -237,3 +253,76 @@ export const travelSliderImages = [
 export const cartoon_tree = cartoon_tree_no_bg;
 export const smiley_dark_lady = smile_black_lady;
 export const traveling_white_lady = white_traveling_lady;
+
+export const photos = [
+  {
+    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+    text: "Image One",
+  },
+  {
+    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+    text: "Image Two",
+  },
+  {
+    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+    text: "Image Three",
+  },
+  {
+    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+    text: "Image Four",
+  },
+  {
+    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+    text: "Image Five",
+  },
+  {
+    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+    text: "Image Six",
+  },
+  {
+    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    text: "Image Seven",
+  },
+  {
+    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+    text: "Image Eight",
+  },
+  {
+    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    text: "Image Nine",
+  },
+];
+
+// export const Media = [
+//   { type: "video", url: require("./images/media/vid-01.mp4") },
+//   { type: "video", url: require("./images/media/vid-02.mp4") },
+//   { type: "video", url: require("./images/media/vid-03.mp4") },
+//   { type: "video", url: require("./images/media/vid-04.mp4") },
+//   { type: "video", url: require("./images/media/vid-05.mp4") },
+//   { type: "video", url: require("./images/media/vid-06.mp4") },
+//   { type: "video", url: require("./images/media/vid-07.mp4") },
+//   { type: "video", url: require("./images/media/vid-08.mp4") },
+//   { type: "video", url: require("./images/media/vid-09.mp4") },
+//   { type: "image", url: require("./images/media/img-01.jpg") },
+//   { type: "image", url: require("./images/media/img-02.jpg") },
+//   { type: "image", url: require("./images/media/img-03.jpg") },
+//   { type: "image", url: require("./images/media/img-04.jpg") },
+//   { type: "image", url: require("./images/media/img-05.jpg") },
+// ];
+
+export const media = [
+  { id: 1, type: "video", src: gallery_video_1 },
+  { id: 2, type: "video", src: gallery_video_2 },
+  { id: 3, type: "image", src: gallery_image_1 },
+  { id: 4, type: "image", src: gallery_image_2 },
+  { id: 5, type: "image", src: gallery_image_3 },
+  { id: 6, type: "image", src: gallery_image_4 },
+  { id: 7, type: "video", src: gallery_video_3 },
+  { id: 8, type: "video", src: gallery_video_4 },
+  { id: 9, type: "video", src: gallery_video_5 },
+  { id: 10, type: "video", src: gallery_video_6 },
+  { id: 11, type: "image", src: gallery_image_5 },
+  { id: 12, type: "video", src: gallery_video_7 },
+  { id: 13, type: "video", src: gallery_video_8 },
+  { id: 14, type: "video", src: gallery_video_9 },
+];
