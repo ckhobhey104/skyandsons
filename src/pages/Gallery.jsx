@@ -22,15 +22,18 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   flex: 1;
+  align-items: center;
+  /* border: 1px solid red; */
+  padding: 10px;
 `;
 
 const H1 = styled.h1`
   text-align: center;
   padding: 15px;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
   ${mobile({
-    fontSize: "20px",
+    fontSize: "15px",
   })}
 `;
 const MediaContainer = styled.div`
@@ -113,12 +116,12 @@ const PopupVideo = styled.video`
 
 const Gallery = () => {
   const [file, setFile] = useState(null);
-  console.log(file);
+
   return (
     <Container>
       <Title>
         <Left>
-          <H1>Our Gallery</H1>
+          <H1>Our Minning Site In The Western Region Of Ghana</H1>
         </Left>
         <Right>
           <RouterLink to="/" style={{ textDecoration: "none" }}>

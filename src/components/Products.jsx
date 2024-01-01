@@ -49,7 +49,7 @@ const SlideWrapper = styled.div`
   justify-content: space-between;
   transition: all 0.5s ease;
   transform: translateX(
-    ${(props) => props.slideIndex * -(props.length * 15)}vw
+    ${(props) => props.slideIndex * -(props.length * 17)}vw
   );
   ${mobile({
     display: "block",
@@ -77,7 +77,7 @@ const Products = () => {
     const isLastSlide = slideIndex === popularProducts.length;
     const newIndex = isLastSlide ? 0 : slideIndex + 1;
     setSlideIndex(newIndex);
-    console.log("Next", slideIndex);
+    // console.log("Next", slideIndex);
   };
   const handleClick = (direction) => {
     if (direction === "left") {

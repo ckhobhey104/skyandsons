@@ -14,11 +14,13 @@ import category_img4 from "./images/categories/goldbar_2.jpg";
 import product_img1 from "./images/products/soybeans_grains.png";
 import product_img2 from "./images/products/cashew-1.png";
 import product_img3 from "./images/products/sesame_seed2.png";
-import product_img4 from "./images/products/sugar_1.png";
+import product_img4 from "./images/products/white_sugar_1.png";
 import product_img5 from "./images/products/denya_wood_1.png";
-import product_img6 from "./images/products/frytol.png";
+import product_img6 from "./images/products/vegetable_oil.png";
 import product_img7 from "./images/products/azobe_wood.png";
 import product_img8 from "./images/products/teak_wood.png";
+import product_img9 from "./images/products/scrap.png";
+import product_img10 from "./images/products/gold_diamond_4.png";
 import member_of from "./images/payment/memberof.png";
 
 // TRAVEL AND TOUR IMAGE IMPORTS
@@ -177,17 +179,18 @@ export const popularProducts = [
     title: "SUGAR",
     desc: "We import sugar and sell to various organizations in the country",
   },
+
+  {
+    id: 6,
+    img: product_img6,
+    title: "COOKING OIL",
+    desc: "We import oil from Asia and Europe and supply to local organizations (including red/palm oil)",
+  },
   {
     id: 5,
     img: product_img5,
     title: "DENYA WOODS",
     desc: "We get it from our forest and sell it to various organizations",
-  },
-  {
-    id: 6,
-    img: product_img6,
-    title: "OIL",
-    desc: "We import oil from Asia and Europe and supply to local organizations (including red/palm oil)",
   },
   {
     id: 7,
@@ -200,6 +203,18 @@ export const popularProducts = [
     img: product_img8,
     title: "TEAK",
     desc: "We get it from our forest and sell it to various organizations",
+  },
+  {
+    id: 10,
+    img: product_img10,
+    title: "GOLD AND DIAMONDS",
+    desc: "We are into minning and purchase of gold and rough diamonds",
+  },
+  {
+    id: 9,
+    img: product_img9,
+    title: "SCRAPS",
+    desc: "We are also into sale and purchase of scraps",
   },
 ];
 
